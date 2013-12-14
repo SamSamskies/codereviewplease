@@ -74,8 +74,16 @@ button {
 
 .request {
   margin: auto;
-  width: 800px;
+  width: 780px;
   overflow: hidden;
+
+  table {
+    border-spacing: 5px;
+  }
+
+  tr {
+    width: 100%;
+  }
 
   &:nth-child(odd) {
     .comment-count, .title {
@@ -84,27 +92,24 @@ button {
   }
 
   .comment-count, .title {
-    height: 100px;
-    line-height: 100px;
     background: white;
     text-align: center;
-    margin: 1%;
     border-radius: 5px;
-    max-height: 100px;
   }
 
   .comment-count {
     font-size: 3em;
-    width: 20%;
-    float: left;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 40px;
     box-sizing: border-box;
   }
 
   .title {
-    width: 76%;
-    height: 100%;
-    float: right;
+    width: 100%;
     font-size: 1.5em;
+    text-align: left;
+    padding: 10px 10px 10px 30px;
 
     a {
       text-decoration: none;
