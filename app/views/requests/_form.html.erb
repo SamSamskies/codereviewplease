@@ -10,13 +10,13 @@
       </div>
     <% end %>
     <div class='field'>
-      <%= f.label :gist_url %>
-      <%= f.text_field :gist_url %>
+      <%= f.label :gist_url, 'Gist URL (ex. https://gist.github.com/SamSamskies/6921734)' %>
+      <%= f.url_field :gist_url, required: true, pattern: "https://gist.github.com/.+" %>
     </div>
 
     <div class='field'>
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, required: true %>
     </div>
 
     <div class='field'>
@@ -24,6 +24,6 @@
       <%= f.text_area :description %>
     </div>
 
-    <%= f.submit %>
+    <%= f.submit 'Submit Request', class: 'button-submit' %>
   <% end %>
 </div>

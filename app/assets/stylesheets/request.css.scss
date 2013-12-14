@@ -72,21 +72,49 @@
       font-family: 'Oxygen Mono', sans-serif;
     }
 
-    .button-submit {
-      background: #CFCFC7;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 0.25em;
-      font-size: 1.25em;
-      cursor: pointer;
-      border: none;
-      margin: 1em;
-    }
   }
 
   .addthis_toolbox {
     position: absolute;
     bottom: 76px;
     width: 400px;
+  }
+}
+
+.button-submit {
+  background: #CFCFC7;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 0.25em;
+  font-size: 1.25em;
+  cursor: pointer;
+  border: none;
+  margin: 1em;
+}
+
+.request-form {
+  width: 500px;
+  margin: auto;
+
+  .field {
+    margin: 10px;
+  }
+
+  input[type='text'], input[type='url'], textarea {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  input[type='text'], input[type='url'] {
+    height: 50px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+
+  .button-submit {
+    float: right;
   }
 }
