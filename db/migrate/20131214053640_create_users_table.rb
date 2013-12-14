@@ -4,6 +4,7 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string  :username
       t.string  :github_token
       t.string  :email
+      t.string  :avatar_url
 
       t.timestamps
     end
