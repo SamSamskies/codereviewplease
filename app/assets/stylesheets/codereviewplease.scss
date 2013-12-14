@@ -3,6 +3,8 @@
 body {
   padding-top: 100px;
   background-color: #EFEDDF;
+  font-family: 'Oxygen Mono', sans-serif;
+  font-size: 0.9em;
 }
 
 #header {
@@ -15,6 +17,7 @@ body {
   height: 70px;
   line-height: 70px;
   margin-bottom: 200px;
+  z-index: 9000;
 
   .brand {
     text-decoration: none;

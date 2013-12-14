@@ -1,0 +1,33 @@
+.request-info-containter {
+  // background: red;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+
+  .request-title {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 2.5em;
+    height: 100%;
+    padding: 0 4em 0.5em 1em;
+
+
+      .username {
+      font-size: 0.3em;
+      padding: 0 0 0 0.3em;
+    }
+  }
+
+  .request-description {
+    padding: 0 20em 2em 5em;
+  }
+
+  .avatar-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1.5em;
+    height: 75px;
+  }
+}

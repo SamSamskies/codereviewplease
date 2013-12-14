@@ -1,11 +1,17 @@
-<div class='request-title'>
-  <%= @request.title %>
+<div class="request-info-containter">
+
+  <div class='request-title'>
+    <div class='username'>Asked by <%= @request.user.username %></div>
+    <%= @request.title %>
+  </div>
+  <%= image_tag(@request.user.avatar_url, class: "avatar-img") %>
+  <div class='request-description'>
+    <%= @request.description %>
+  </div>
+  
+
 </div>
-<div class='request-description'>
-  <%= @request.description %>
-</div>
-<div class='username'>Asked by <%= @request.user.username %></div>
-<%= image_tag(@request.user.avatar_url) %>
+
 
 <div class='request-embeded-gist'>
   <script src="<%= @request.embed_url %>"></script>
