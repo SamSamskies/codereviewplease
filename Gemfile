@@ -42,6 +42,11 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
