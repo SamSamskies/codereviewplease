@@ -1,7 +1,5 @@
 <div class='request-list'>
   <% @requests.each do |request| %>
-    <div>
-      <%= link_to request.comments.count, request_path(request) %> | <%= link_to request.title, request_path(request) %>
-    </div>
+    <%= render 'request', request: request %>
   <% end %>
 </div>
