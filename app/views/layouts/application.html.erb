@@ -2,23 +2,23 @@
 <html>
 <head>
   <title>Codereviewplease</title>
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all" %>
- -  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <div id="header">
-  <ul>
-    <li><%= link_to 'Code Review, Please', root_path %></li>
-    <li><%= link_to 'All Reviews', requests_path %></li>
-    <li><%= link_to 'My Reviews', '' %></li>
-    <li><%= link_to 'Social', '' %></li>
-    <li><%= link_to '/auth/github' do %><button type="button" class= 'github-button'><i class="fa fa-github"></i> Github</button><% end %></li>
-  </ul>
+  <div class="container">
+    <%= link_to 'Code Review, Please', root_path, class: 'brand' %>
+    <%= link_to '/auth/github' do %><button type="button" class= 'github-button'><i class="fa fa-github"></i> Sign In</button><% end %>
+  </div>
 </div>
 
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>
