@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'faker'
 gem 'font-awesome-rails'
+gem 'rdiscount'
 
 group :doc do
   gem 'sdoc', require: false

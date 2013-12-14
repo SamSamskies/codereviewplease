@@ -16,7 +16,7 @@
 
 <% @request.comments.each do |comment| %>
   <div class='request-comment'>
-    <%= comment.body %>
+    <%= RDiscount.new(comment.body).to_html.html_safe %>
   </div>
 <% end %>
 
