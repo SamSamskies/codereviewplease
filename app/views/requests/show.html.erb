@@ -16,43 +16,45 @@
   <script src="<%= @request.embed_url %>"></script>
 </div>
 
-<% @request.comments.each do |comment| %>
+<div class='comments-container'>
+  <% @request.comments.each do |comment| %>
 
-  <div class='request-comment'>
-    <%= RDiscount.new(comment.body).to_html.html_safe %>
-    <span class='request-comment-time'>
-      <%= comment.created_at.strftime("reviewed %b %d, %Y at %I:%M%p") %>
-    </span>
+    <div class='request-comment'>
+      <%= RDiscount.new(comment.body).to_html.html_safe %>
+      <span class='request-comment-time'>
+        <%= comment.created_at.strftime("reviewed %b %d, %Y at %I:%M%p") %>
+      </span>
+    </div>
+  <% end %>
+
+  <%= render 'comments/form', locals: { request: @request } %>
+
+  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+  <a class="addthis_button_preferred_1"></a>
+  <a class="addthis_button_preferred_2"></a>
+  <a class="addthis_button_preferred_3"></a>
+  <a class="addthis_button_preferred_4"></a>
+  <a class="addthis_button_compact"></a>
+  <a class="addthis_counter addthis_bubble_style"></a>
   </div>
-<% end %>
-
-<%= render 'comments/form', locals: { request: @request } %>
-
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_preferred_3"></a>
-<a class="addthis_button_preferred_4"></a>
-<a class="addthis_button_compact"></a>
-<a class="addthis_counter addthis_bubble_style"></a>
-</div>
-<meta property="og:title" content="Your title here" />
-<meta property="og:description" content="your description here" />
-<script type="text/javascript">
-  var addthis_config = {
-    "data_track_addressbar" : false,
-    "data_track_clickback"  : false
-  }
-
-  var addthis_share = addthis_share || {}
-  addthis_share = {
-    passthrough : {
-      twitter: {
-        text: "Requesting a code review, please. :)"
-      },
+  <script type="text/javascript">
+    var addthis_config = {
+      "data_track_addressbar" : false,
+      "data_track_clickback"  : false
     }
-  }
-</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51febb8b0c7aa2c1"></script>
-<!-- AddThis Button END -->
+
+    var addthis_share = addthis_share || {}
+    addthis_share = {
+      passthrough : {
+        twitter: {
+          text: "Requesting a code review, please. :)"
+        },
+      }
+    }
+  </script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51febb8b0c7aa2c1"></script>
+  <!-- AddThis Button END -->
+
+</div>
+
+
