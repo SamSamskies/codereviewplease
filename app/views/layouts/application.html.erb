@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= link_to 'Sign in bro', '/auth/github' %>
+
+  
+  <%= link_to '/auth/github' do%>
+    <button type="button" class= 'github-button'>  <i class="fa fa-github"></i> Sign in bro </button>
+  <% end %>
 
 <%= yield %>
 

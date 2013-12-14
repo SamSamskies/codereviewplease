@@ -1,4 +1,17 @@
+@import "font-awesome";
+
 .request-list {
   margin-top: 10px;
   border: 5px green solid;
+}
+
+.github-button {
+  background: #CFCFC7;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  width: 150px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
 }
