@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'puma'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'faker'
 
 group :doc do
   gem 'sdoc', require: false
