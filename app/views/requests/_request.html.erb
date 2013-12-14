@@ -1,0 +1,8 @@
+<div class='request'>
+  <div class='comment-count'>
+    <%= request.comments.count %>
+  </div>
+  <div class='title'>
+    <%= link_to request.title, request_path(request) %>
+  </div>
+</div>

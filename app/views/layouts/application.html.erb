@@ -14,12 +14,18 @@
 <div id="header">
   <div class="container">
     <%= link_to 'Code Review, Please', root_path, class: 'brand' %>
-    <%= link_to '/auth/github' do %><button type="button" class= 'github-button'><i class="fa fa-github"></i> Sign In</button><% end %>
+    <% if current_user %>
+      <%= image_tag(current_user.avatar_url) %>
+      <%= link_to logout_path do %><i class="fa fa-sign-out fa-2x"></i><% end %>
+      <%= link_to new_request_path do %><i class="fa fa-bullhorn fa-2x"></i><% end %>
+    <% else %>
+      <%= link_to '/auth/github' do %><button type="button" class= 'button-github'><i class="fa fa-github"></i> Sign In</button><% end %>
+    <% end %>
   </div>
 </div>
 
 <div class="container">
-<%= yield %>
+  <%= yield %>
 </div>
 
 </body>
