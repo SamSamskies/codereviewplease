@@ -8,11 +8,15 @@
 </head>
 <body>
 
-
-  
-  <%= link_to '/auth/github' do%>
-    <button type="button" class= 'github-button'>  <i class="fa fa-github"></i> Sign in bro </button>
-  <% end %>
+<div id="header">
+  <ul>
+    <li><%= link_to 'Code Review, Please', root_path %></li>
+    <li><%= link_to 'All Reviews', requests_path %></li>
+    <li><%= link_to 'My Reviews', '' %></li>
+    <li><%= link_to 'Social', '' %></li>
+    <li><%= link_to '/auth/github' do %><button type="button" class= 'github-button'><i class="fa fa-github"></i> Github</button><% end %></li>    
+  </ul>
+</div>
 
 <%= yield %>
 

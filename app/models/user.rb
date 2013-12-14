@@ -14,4 +14,5 @@ class User < ActiveRecord::Base
       User.create(username: username, email: email, avatar_url: avatar_url, github_token: token)
     end
   end  
+
 end

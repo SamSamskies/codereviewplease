@@ -1,6 +1,25 @@
 @import "font-awesome";
 
+#header ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+#header li
+{
+display:inline;
+float:left;
+}
+
+#header a{
+display:block;
+width:200px;
+}
+
 .request-list {
+  display: block;
   margin-top: 10px;
   border: 5px green solid;
 }
@@ -8,10 +27,10 @@
 .github-button {
   background: #CFCFC7;
   border-radius: 0.25em;
-  padding: 0.5em;
+  padding: 0.25em;
   width: 150px;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.25em;
   cursor: pointer;
   border: none;
 }

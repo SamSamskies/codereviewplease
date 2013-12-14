@@ -4,6 +4,8 @@
 <div class='request-description'>
   <%= @request.description %>
 </div>
+<div class='username'>Asked by <%= @request.user.username %></div>
+<%= image_tag(@request.user.avatar_url) %>
 
 <div class='request-embeded-gist'>
   <script src="<%= @request.embed_url %>"></script>
