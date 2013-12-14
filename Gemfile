@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'puma'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'faker'
 
 group :doc do
   gem 'sdoc', require: false
@@ -19,6 +20,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'debugger'
   gem 'dotenv-rails'
 end

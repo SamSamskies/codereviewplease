@@ -1,0 +1,9 @@
+
+
+<div>
+  <% @requests.each do |request| %>
+    <div>
+      <%= link_to request.title, request_path(request) %>
+    </div>
+  <% end %>
+</div>
