@@ -1,7 +1,7 @@
 <div>
   <% @requests.each do |request| %>
     <div>
-      <%= request.description %>
+      <%= link_to request.title, request_path(request) %>
     </div>
   <% end %>
 </div>
