@@ -15,9 +15,9 @@
   <div class="container">
     <%= link_to 'Code Review, Please', root_path, class: 'brand' %>
     <% if current_user %>
-      <%= image_tag(current_user.avatar_url) %>
-      <%= link_to logout_path do %><i class="fa fa-sign-out fa-2x"></i><% end %>
-      <%= link_to new_request_path do %><i class="fa fa-bullhorn fa-2x"></i><% end %>
+      <%= link_to user_path(current_user) do %><%= image_tag(current_user.avatar_url) %><% end %>
+      <%= link_to logout_path do %><i class="fa fa-sign-out fa-2x"><span class="alt-logout">Logout</span></i><% end %>
+      <%= link_to new_request_path do %><i class="fa fa-bullhorn fa-2x"><span class="alt-new-request">New Request</span></i><% end %>
     <% else %>
       <%= link_to '/auth/github' do %><button type="button" class= 'button-github'><i class="fa fa-github"></i> Sign In</button><% end %>
     <% end %>
