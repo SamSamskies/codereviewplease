@@ -5,6 +5,17 @@ body {
   background-color: #EFEDDF;
 }
 
+button {
+  height: 40px;
+  line-height: 40px;
+  width: 150px;
+  border-radius: 0.25em;
+  text-align: center;
+  font-size: 1.25em;
+  cursor: pointer;
+  border: none;
+}
+
 #header {
   background-color: #fff;
   overflow: hidden;
@@ -23,17 +34,25 @@ body {
     font-family: 'Oleo Script Swash Caps', cursive;
   }
 
-  .github-button {
-    background: #CFCFC7;
-    border-radius: 0.25em;
-    padding: 0.25em;
-    width: 150px;
-    text-align: center;
-    font-size: 1.25em;
-    cursor: pointer;
-    border: none;
+  button {
     float: right;
     margin-top: 15px;
+  }
+
+  img {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .fa-sign-out, .fa-bullhorn {
+    float: right;
+    line-height: 70px;
+    margin-left: 20px;
+    color: black;
+  }
+
+  .button-github {
+    background: #CFCFC7;
   }
 }
 

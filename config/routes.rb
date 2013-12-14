@@ -5,4 +5,5 @@ Codereviewplease::Application.routes.draw do
   resources :users, only: [:show]
   resources :comments
   get '/auth/github/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end
