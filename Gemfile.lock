@@ -43,20 +43,16 @@ GEM
     coffee-script-source (1.6.3)
     columnize (0.3.6)
     debug_inspector (0.0.2)
-<<<<<<< HEAD
     debugger (1.6.3)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.2.4)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.4)
-    diff-lcs (1.2.4)
+    diff-lcs (1.2.5)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
-=======
-    diff-lcs (1.2.5)
->>>>>>> 22e3066e77f44dd43f1a54d1db1fd9f1ff6b1412
     erubis (2.7.0)
     execjs (2.0.2)
     faraday (0.8.8)

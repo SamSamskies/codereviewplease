@@ -1,4 +1,5 @@
 Codereviewplease::Application.routes.draw do
+  get "sessions/create"
   root 'welcome#index'
   get '/auth/github/callback', to: 'sessions#create'
   # Example of regular route:
