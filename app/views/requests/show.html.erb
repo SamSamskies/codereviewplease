@@ -5,6 +5,10 @@
   <%= @request.description %>
 </div>
 
+<div class='request-embeded-gist'>
+  <script src="<%= @request.embed_url %>"></script>
+</div>
+
 <div>
   <%= link_to 'Back', requests_path %>
 </div>

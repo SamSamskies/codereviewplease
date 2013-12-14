@@ -4,4 +4,8 @@ class Request < ActiveRecord::Base
   has_and_belongs_to_many :tags
 
   validates :gist_url, :title, presence: true
+
+  def embed_url
+    gist_url + '.js'
+  end
 end
