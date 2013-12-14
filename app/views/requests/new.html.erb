@@ -1,0 +1,20 @@
+<div class='request-form'>
+  <%= form_for @request do |f| %>
+    <div>
+      <%= f.label :gist_url %>
+      <%= f.text_field :gist_url %>
+    </div>
+
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area:description %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>
