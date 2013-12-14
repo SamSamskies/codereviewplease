@@ -1,19 +1,51 @@
 @import "font-awesome";
 
-.request-list {
-  margin-top: 10px;
-  border: 5px green solid;
+body {
+  padding-top: 100px;
+  background-color: #EFEDDF;
 }
 
-.github-button {
-  background: #CFCFC7;
-  border-radius: 0.25em;
-  padding: 0.5em;
-  width: 150px;
-  text-align: center;
-  font-size: 1em;
-  cursor: pointer;
-  border: none;
+#header {
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 200px;
+
+  .brand {
+    text-decoration: none;
+    color: #708090;
+    font-size: 2em;
+    font-family: 'Oleo Script Swash Caps', cursive;
+  }
+
+  .github-button {
+    background: #CFCFC7;
+    border-radius: 0.25em;
+    padding: 0.25em;
+    width: 150px;
+    text-align: center;
+    font-size: 1.25em;
+    cursor: pointer;
+    border: none;
+    float: right;
+    margin-top: 15px;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 1024px;
+}
+
+.request-list {
+  display: block;
+  margin-top: 10px;
+  border: 5px green solid;
 }
 
 .form-errors ul {

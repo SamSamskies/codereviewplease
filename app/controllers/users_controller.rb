@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @requests = Request.where(user_id: params[:id])
+    p @requests
   end
 
   private

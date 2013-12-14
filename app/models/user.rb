@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :requests
+  has_many :comments
 
   def self.find_or_create_from_auth_hash(auth_hash)
     token = auth_hash.credentials.token

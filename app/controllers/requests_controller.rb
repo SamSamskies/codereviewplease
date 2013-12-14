@@ -5,6 +5,7 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find params[:id]
+    @comment = Comment.new
   end
 
   def new
@@ -12,11 +13,9 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new request_params
-    @request.user_id = session[:user_id]
-
+    @request = current_user.requests.new request_params
     if @request.save
-      redirect_to request_path(request)
+      redirect_to request_path(@request)
     else
       render 'requests/new'
     end

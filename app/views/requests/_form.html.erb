@@ -1,0 +1,29 @@
+<div class='request-form'>
+  <%= form_for @request do |f| %>
+    <% if @request.errors.any? %>
+      <div class="form-errors">
+        <ul>
+          <% @request.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class='field'>
+      <%= f.label :gist_url %>
+      <%= f.text_field :gist_url %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>
