@@ -13,6 +13,7 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new request_params
+    @request.user_id = session[:user_id]
 
     if @request.save
       redirect_to request_path(request)
