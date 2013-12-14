@@ -1,11 +1,10 @@
 <div class='comment-form'>
   <%= form_for @comment do |f| %>
     <div class='field'>
-      <%= f.label 'Comment' %>
-      <%= f.text_area :body %>
+      <%= f.text_area :body, class: 'comment-text'%>
     </div>
     <%= f.hidden_field :request_id, value: @request.id %> <%# Janky, works for now %>
 
-    <%= f.submit %>
+    <%= f.submit 'Submit comment', class: 'button-submit' %>
   <% end %>
 </div>

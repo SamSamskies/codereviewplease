@@ -15,8 +15,12 @@
 </div>
 
 <% @request.comments.each do |comment| %>
+
   <div class='request-comment'>
     <%= RDiscount.new(comment.body).to_html.html_safe %>
+    <span class='request-comment-time'>
+      <%= comment.created_at.strftime("reviewed %b %d, %Y at %I:%M%p") %>
+    </span>
   </div>
 <% end %>
 
