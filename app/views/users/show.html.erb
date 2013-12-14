@@ -1,8 +1,3 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
-<ul>
 <% @requests.each do |request| %>
-  <li><%= link_to request.title, request_path(request) %></li>
+  <%= render '/requests/request', request: request %>
 <% end %>
-</ul>
