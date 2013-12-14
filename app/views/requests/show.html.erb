@@ -9,6 +9,14 @@
   <script src="<%= @request.embed_url %>"></script>
 </div>
 
+<% @request.comments.each do |comment| %>
+  <div class='request-comment'>
+    <%= comment.body %>
+  </div>
+<% end %>
+
+<%= render 'comments/form', locals: { request: @request } %>
+
 <div>
   <%= link_to 'Back', requests_path %>
 </div>
