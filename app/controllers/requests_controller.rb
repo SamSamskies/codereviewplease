@@ -39,7 +39,7 @@ class RequestsController < ApplicationController
   end
 
   def parse_tags(tags)
-    tags.split.map { |tag| tag[1..-1] }
+    tags.split.reject { |tag| tag.first != '#' }.map { |tag| tag[1..-1].downcase }
   end
 
 end
