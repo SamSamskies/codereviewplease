@@ -24,6 +24,13 @@
       <%= f.text_area :description %>
     </div>
 
+    <%= f.fields_for :tags do |tag| %>
+      <div class='field'>
+        <%= tag.label :names, "Tags (ex. #Ruby #JavaScript #DevBootcamp)" %>
+        <%= tag.text_field :names %>
+      </div>
+    <% end %>
+
     <%= f.submit 'Submit Request', class: 'button-submit' %>
   <% end %>
 </div>
