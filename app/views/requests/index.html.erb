@@ -1,5 +1,15 @@
-<div class='request-list'>
-  <% @requests.each do |request| %>
-    <%= render 'request', request: request %>
-  <% end %>
+<div class='request-list' ng-controller='RequestIndexCtrl' ng-init='initialize(<%= @requests %>)'>
+  <input type='text' ng-model='filterText'></input>
+  <div class='request' ng-repeat='request in models.requests | request:filterText'>
+    <table>
+      <tr>
+        <td class='comment-count'>
+          {{request.comments.length}}
+        </td>
+        <td class='title'>
+          <a href="/requests/#{request.id}">{{request.title}}</a>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
