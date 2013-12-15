@@ -3,6 +3,6 @@ class RequestSerializer < ActiveModel::Serializer
   self.root = false
 
   def tags
-    object.tags.map(&:name)
+    object.tags.map { |tag| tag.name.downcase }
   end
 end
