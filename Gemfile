@@ -14,6 +14,7 @@ gem 'omniauth-github'
 gem 'faker'
 gem 'font-awesome-rails'
 gem 'rdiscount'
+gem 'active_model_serializers'
 
 group :doc do
   gem 'sdoc', require: false
