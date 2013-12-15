@@ -135,13 +135,15 @@ button {
       color: #666;
     }
 
-    .tags {
+    .tag {
       // background: orange;
       font-size: 0.7em;
       margin-top: 5px;
       opacity: 0.3;
       font-weight: bold;
       color: #000;
+      padding-right: 7px;
+      cursor: pointer;
     }
   }
 }

@@ -2,10 +2,13 @@
   <table>
     <tr>
       <td class='comment-count'>
-        {{commentCount}}
+        {{request.comments.length}}
       </td>
       <td class='title'>
-        <a href="/requests/{{requestId}}">{{title}}</a>
+        <a href="/requests/{{request.id}}">{{request.title}}</a>
+        <div>
+          <span class='tag' ng-repeat='tag in request.tags' ng-click='setFilterText(tag)'>#{{tag}}</span>
+        </div>
       </td>
     </tr>
   </table>
