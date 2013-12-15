@@ -19,6 +19,9 @@
 <div class='comments-container'>
   <% @request.comments.each do |comment| %>
     <div class='request-comment'>
+      <% if display_delete? @request.user, comment.user %>
+        <div class='delete'>x</div>
+      <% end %>
       <div class='request-comment-message'>
       <%= RDiscount.new(comment.body).to_html.html_safe %>
       </div>

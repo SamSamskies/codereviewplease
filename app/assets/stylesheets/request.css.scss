@@ -71,6 +71,26 @@
       color: #708090;
       margin-bottom: 1.5em;
     }
+
+    &:hover > .delete {
+      display: block;
+    }
+  }
+
+  .delete {
+    display: none;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    height: 15px !important;
+    width: 15px !important;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .delete:hover {
+    background: #F8A79E;
+    cursor: pointer;
   }
 
   .comment-form {
