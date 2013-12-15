@@ -4,15 +4,6 @@
   </div>
   <input id="request-search-box" type='text' ng-model='filterText' placeholder="Search, please"></input>
   <div class='request' ng-repeat='request in models.requests | request:filterText'>
-    <table>
-      <tr>
-        <td class='comment-count'>
-          {{request.comments.length}}
-        </td>
-        <td class='title'>
-          <a href="/requests/{{request.id}}">{{request.title}}</a>
-        </td>
-      </tr>
-    </table>
+    <request-item request-id='{{request.id}}' title='{{request.title}}' comment-count='{{request.comments.length}}'></request-item>
   </div>
 </div>
