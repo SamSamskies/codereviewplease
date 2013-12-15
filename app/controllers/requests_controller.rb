@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
   def index
-    @requests = Request.all
+    @requests = Request.all.map { |r| RequestSerializer.new(r) }.to_json
   end
 
   def show
