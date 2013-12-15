@@ -14,5 +14,5 @@ class User < ActiveRecord::Base
       avatar_url = auth_hash.extra.raw_info.avatar_url
       User.create(username: username, email: email, avatar_url: avatar_url, github_token: token)
     end
-  end  
+  end
 end

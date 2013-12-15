@@ -47,11 +47,29 @@
     background: #fefefe;
     word-wrap: break-word;
 
+    .request-comment-message {
+      width: 85%;
+    }
+
     .request-comment-time {
       font-size: 0.7em;
       position: absolute;
       right: 1em;
       bottom: 0;
+    }
+
+    .request-comment-avatar {
+      position: absolute;
+      bottom: 1em;
+      right: 0;
+      margin: 1em 0.7em;
+      height: 60px;
+    }
+
+    #smiley-face {
+      opacity: 0.2;
+      color: #708090;
+      margin-bottom: 1.5em;
     }
   }
 
