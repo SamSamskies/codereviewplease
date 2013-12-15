@@ -1,0 +1,15 @@
+<div class='request'>
+  <table>
+    <tr>
+      <td class='comment-count'>
+        {{request.comments.length}}
+      </td>
+      <td class='title'>
+        <a href="/requests/{{request.id}}">{{request.title}}</a>
+        <div>
+          <span class='tag cursor-pointer' ng-repeat='tag in request.tags' ng-click='setFilterText(tag)'>#{{tag}}</span>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
