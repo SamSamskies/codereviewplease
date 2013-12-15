@@ -2,10 +2,10 @@
   <table>
     <tr>
       <td class='comment-count'>
-        <%= request.comments.count %>
+        {{commentCount}}
       </td>
       <td class='title'>
-        <%= link_to request.title, request_path(request) %>
+        <a href="/requests/{{requestId}}">{{title}}</a>
       </td>
     </tr>
   </table>
