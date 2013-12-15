@@ -14,6 +14,7 @@ gem 'omniauth-github'
 gem 'faker'
 gem 'font-awesome-rails'
 gem 'rdiscount'
+gem 'active_model_serializers'
 
 group :doc do
   gem 'sdoc', require: false
@@ -30,6 +31,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :test do

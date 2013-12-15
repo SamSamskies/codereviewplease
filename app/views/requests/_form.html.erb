@@ -11,7 +11,7 @@
     <% end %>
     <div class='field'>
       <%= f.label :gist_url, 'Gist URL (ex. https://gist.github.com/SamSamskies/6921734)' %>
-      <%= f.url_field :gist_url, required: true, pattern: "https://gist.github.com/.+" %>
+      <%= f.url_field :gist_url, required: true, pattern: "https://gist.github.com/.+[^.git]$" %>
     </div>
 
     <div class='field'>
