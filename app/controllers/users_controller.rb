@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :validate_user, only: [:show]
 
   def show
-    @requests = Request.where(user_id: params[:id])
-    p @requests
+    @requests = Request.where(user_id: params[:id]).map { |r| RequestSerializer.new(r) }.to_json
   end
 
   private

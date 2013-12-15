@@ -1,3 +1,8 @@
-<% @requests.each do |request| %>
-  <%= render '/requests/request', request: request %>
-<% end %>
+<div class='request-list' ng-controller='RequestIndexCtrl' ng-init='initialize(<%= @requests %>)'>
+  <div class="column-description">
+    <span># of reviews</span>
+  </div>
+  <div class='request' ng-repeat='request in models.requests | request:filterText'>
+    <request-item request-id='{{request.id}}' title='{{request.title}}' comment-count='{{request.comments.length}}' tags='{{request.tags}}'></request-item>
+  </div>
+</div>

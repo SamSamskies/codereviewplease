@@ -80,7 +80,7 @@ button {
   opacity: 0.2;
   padding: 0 40px;
   display: inline;
-  margin-right: 398px;
+  margin-right: 350px;
 }
 
 #request-search-box{
@@ -143,11 +143,18 @@ button {
       font-weight: bold;
       color: #000;
       padding-right: 7px;
-      cursor: pointer;
     }
   }
 }
 
 .form-errors ul {
   list-style-type: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.clear-filter {
+  opacity: 0.5;
 }
