@@ -1,3 +1,5 @@
+$subtle-gray: #708090;
+
 .request-info-containter {
   overflow: hidden;
   height: 100%;
@@ -68,7 +70,7 @@
 
     #smiley-face {
       opacity: 0.2;
-      color: #708090;
+      color: $subtle-gray;
       margin-bottom: 1.5em;
     }
 
@@ -86,6 +88,11 @@
     width: 15px !important;
     line-height: 15px;
     text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $subtle-gray;
+    }
   }
 
   .delete:hover {

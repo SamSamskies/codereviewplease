@@ -7,6 +7,11 @@ class CommentsController < ApplicationController
     redirect_to @comment.request
   end
 
+  def destroy
+    result = Comment.find(params[:id]).destroy
+    render json: result.destroyed?
+  end
+
   private
 
   def comment_params
