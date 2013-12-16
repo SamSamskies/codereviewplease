@@ -16,7 +16,7 @@
   <script src="<%= @request.embed_url %>"></script>
 </div>
 
-<div class='comments-container'>
+<div id='comments-container'>
   <% @request.comments.each do |comment| %>
       <%= render '/comments/comment', request: @request, comment: comment %>
   <% end %>
