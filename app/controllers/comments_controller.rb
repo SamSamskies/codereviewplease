@@ -8,7 +8,8 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    result = Comment.find(params[:id]).destroy
+    comment = Comment.find params[:id]
+    result = comment.destroy if comment.allow_destroy? current_user
     render json: result.destroyed?
   end
 
@@ -17,4 +18,5 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit :body, :request_id
   end
+
 end
