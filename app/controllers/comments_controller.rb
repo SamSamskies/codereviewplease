@@ -3,8 +3,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new comment_params
     @comment.user = current_user if current_user
     @comment.save
-
-    redirect_to @comment.request
   end
 
   def destroy

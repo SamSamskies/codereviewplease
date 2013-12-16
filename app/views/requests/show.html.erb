@@ -18,28 +18,11 @@
 
 <div class='comments-container'>
   <% @request.comments.each do |comment| %>
-    <div class='request-comment'>
-      <% if display_delete? @request.user, comment.user %>
-        <div class='delete'>
-          <%= link_to 'x', comment_path(comment), confirm: 'Do you really want to delete this comment?', method: :delete, remote: true %>
-        </div>
-      <% end %>
-      <div class='request-comment-message'>
-      <%= RDiscount.new(comment.body).to_html.html_safe %>
-      </div>
-       <% if comment.user %>
-          <%= image_tag(comment.user.avatar_url, class: 'request-comment-avatar') %>
-        <% else %>
-          <div class= 'request-comment-avatar' id="smiley-face">
-            <i class="fa fa-smile-o fa-5x"></i>
-          </div>
-        <% end %>
-      <span class='request-comment-time'>
-        <%= comment.created_at.strftime("Reviewed by #{comment.author} on %b %d, %Y at %I:%M%p") %>
-      </span>
-    </div>
+      <%= render '/comments/comment', request: @request, comment: comment %>
   <% end %>
+</div>
 
+<div id='comment-form-container'>
   <%= render 'comments/form', locals: { request: @request } %>
 
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -67,7 +50,6 @@
   </script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51febb8b0c7aa2c1"></script>
   <!-- AddThis Button END -->
-
 </div>
 
 

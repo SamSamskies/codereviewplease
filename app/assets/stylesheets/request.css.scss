@@ -99,7 +99,11 @@ $subtle-gray: #708090;
     background: #F8A79E;
     cursor: pointer;
   }
+}
 
+#comment-form-container {
+  position: relative;
+  overflow: hidden;
   .comment-form {
     text-align: right;
     float: right;
