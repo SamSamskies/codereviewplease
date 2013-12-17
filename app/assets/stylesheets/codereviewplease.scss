@@ -70,26 +70,39 @@ button {
 
 .container {
   margin: auto;
-  width: 1024px;
+  width: 960px;
 }
 
-.column-description {
-  margin: 0 92px;
+#requests-header {
+  margin: 0 auto;
+  padding-bottom: 12px;
   width: 780px;
-  font-size: 0.9em;
-  opacity: 0.2;
-  padding: 0 40px;
-  display: inline;
-  margin-right: 350px;
+  height: 20px;
+  position: relative;
+
+  #comment-count-header {
+    font-size: 0.9em;
+    line-height: 40px;
+    opacity: 0.2;
+    margin: 3px 0 0 10px;
+  }
+
+  #search-container {
+    position: absolute;
+    top: 0;
+    right: 3px;
+
+    #request-search-box {
+      height: 30px;
+      font-size: 1.2em;
+      padding: 0 1em;
+      border: 0px;
+      border-radius: 2px;
+    }
+  }
 }
 
-#request-search-box{
-  height: 30px;
-  font-size: 1.2em;
-  padding: 0 1em;
-  border: 0px;
-  border-radius: 2px;
-}
+
 
 .request {
   margin: auto;
