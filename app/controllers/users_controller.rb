@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @requests = Request.where(user_id: params[:id]).order('created_at DESC').map { |r| RequestSerializer.new(r) }.to_json
+    render '/requests/index'
   end
 
   private
