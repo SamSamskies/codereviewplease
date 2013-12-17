@@ -9,7 +9,9 @@ $(document).ready ->
 App = {
 
   init: ->
+    @savedComment = 'savedComment'
     hljs.initHighlightingOnLoad()
+    @restoreComment() if $.cookie @savedComment
     @initListeners()
 
   initListeners: ->
@@ -25,5 +27,12 @@ App = {
 
     $(document).on 'ajax:success', '.request-comment', (e, xhr, status) ->
       $(@).fadeOut() if xhr
+
+    $('#button-github').click =>
+      $.cookie @savedComment, $('#comment_body').val() if $('#comment_body').val()
+
+  restoreComment: ->
+    $('#comment_body').val $.cookie @savedComment
+    $.removeCookie @savedComment
 
 }

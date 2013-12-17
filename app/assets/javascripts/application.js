@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require angular.min
 //= require sugar.min
+//= require jquery.cookie
 //= require_tree .
