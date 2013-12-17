@@ -1,1 +1,6 @@
+<% if @comment.valid? %>
+
 $('#comments-container').append('<%= j render "comment", request: @comment.request, comment: @comment %>')
+$('#comment_body').val('')
+
+<% end %>
