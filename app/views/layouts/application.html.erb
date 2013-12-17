@@ -21,7 +21,7 @@
       <%= link_to logout_path do %><i class="fa fa-sign-out fa-2x"><span class="alt-logout"> Logout</span></i><% end %>
       <%= link_to new_request_path do %><i class="fa fa-bullhorn fa-2x"><span class="alt-new-request"> New Request</span></i><% end %>
     <% else %>
-      <%= link_to '/auth/github' do %><button type="button" class= 'button-github'><i class="fa fa-github"></i> Sign In</button><% end %>
+      <%= link_to '/auth/github' do %><button type="button" id= 'button-github'><i class="fa fa-github"></i> Sign In</button><% end %>
     <% end %>
   </div>
 </div>
