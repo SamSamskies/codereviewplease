@@ -1,7 +1,7 @@
 <div class='comment-form'>
   <%= form_for @comment, remote: true do |f| %>
     <div class='field'>
-      <%= f.text_area :body, class: 'comment-text'%>
+      <%= f.text_area :body, class: 'comment-text expanding'%>
     </div>
     <%= f.hidden_field :request_id, value: @request.id %> <%# Janky, works for now %>
 

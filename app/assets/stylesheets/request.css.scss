@@ -109,9 +109,8 @@ $subtle-gray: #708090;
     float: right;
 
     .comment-text {
-      display: block;
       width: 550px;
-      height: 150px;
+      min-height: 150px;
       padding: 8px;
       border: 1px solid #cccccc;
       line-height: 130%;
@@ -119,6 +118,15 @@ $subtle-gray: #708090;
       margin: 1em 0 0 0;
       font-size: 1em;
       font-family: 'Oxygen Mono', sans-serif;
+    }
+
+    .expanding {
+      right: 0;
+    }
+
+    .button-submit {
+      margin-top: 50px;
+      margin-right: 0;
     }
 
   }
