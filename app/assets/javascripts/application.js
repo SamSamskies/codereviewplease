@@ -16,4 +16,5 @@
 //= require sugar.min
 //= require jquery.cookie
 //= require expanding
+//= require jquery.textarea.min
 //= require_tree .

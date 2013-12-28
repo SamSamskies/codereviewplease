@@ -4,15 +4,16 @@
 ])
 
 $(document).ready ->
-  App.init()
+  APP.init()
 
-App = {
+APP = {
 
   init: ->
     @savedComment = 'savedComment'
     hljs.initHighlightingOnLoad()
     @restoreComment() if $.cookie @savedComment
     @initListeners()
+    $('.comment-text').tabby({ tabString: '  ' })
 
   initListeners: ->
     $('.fa-sign-out').mouseover ->
