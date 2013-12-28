@@ -3,4 +3,7 @@
 $('#comments-container').append('<%= j render "comment", request: @comment.request, comment: @comment %>')
 $('#comment_body').val('')
 
+// Highlight comment that was just added
+hljs.highlightBlock($('#comments-container').find('code').last()[0])
+
 <% end %>
