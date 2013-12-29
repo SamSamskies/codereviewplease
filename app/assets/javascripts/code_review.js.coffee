@@ -12,6 +12,7 @@ APP = {
     @savedComment = 'savedComment'
     hljs.initHighlightingOnLoad()
     @restoreComment() if $.cookie @savedComment
+    @initMobile() if /Mobile|webOS/.test(navigator.userAgent)
     @initListeners()
     $('.comment-text').tabby({ tabString: '  ' })
 
@@ -31,6 +32,9 @@ APP = {
 
     $('#button-github').click =>
       $.cookie @savedComment, $('#comment_body').val() if $('#comment_body').val()
+
+  initMobile: ->
+    $('.delete').addClass('mobile')
 
   restoreComment: ->
     $('#comment_body').val $.cookie @savedComment
