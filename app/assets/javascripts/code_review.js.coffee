@@ -12,7 +12,7 @@ APP = {
     @savedComment = 'savedComment'
     hljs.initHighlightingOnLoad()
     @restoreComment() if $.cookie @savedComment
-    @initMobile() if /Mobile|webOS/.test(navigator.userAgent)
+    @initMobile() if /Mobile|webOS|Android/.test(navigator.userAgent)
     @initListeners()
     $('.comment-text').tabby({ tabString: '  ' })
 
