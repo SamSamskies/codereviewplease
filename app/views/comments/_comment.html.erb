@@ -5,7 +5,7 @@
     </div>
   <% end %>
   <div class='request-comment-message'>
-  <%= RDiscount.new(comment.body).to_html.html_safe %>
+  <%= RDiscount.new(comment.body, :filter_html).to_html.html_safe %>
   </div>
    <% if comment.user %>
       <%= image_tag(comment.user.avatar_url, class: 'request-comment-avatar') %>
