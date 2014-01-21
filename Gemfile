@@ -25,6 +25,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'debugger'
   gem 'dotenv-rails'
+  gem 'rails_db_info'
 end
 
 group :development do
